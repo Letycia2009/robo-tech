@@ -157,34 +157,52 @@ function addXP(amount) {
 }
 
 
+function checkLoggedUser() {
+
+    const savedUser = localStorage.getItem("schoolGameCurrentUser");
+
+    // Se não existe usuário logado, permanece na tela inicial
+    if (!savedUser) {
+        return;
+    }
+
+    try {
+
+        const user = JSON.parse(savedUser);
+
+        // Esconde a tela inicial
+        if (startScreen) {
+            startScreen.classList.add("hidden");
+        }
+
+        // Mostra o conteúdo interno
+        if (mainScreen) {
+            mainScreen.classList.remove("hidden");
+        }
+
+        console.log("Usuário logado:", user.name);
+
+    } catch (error) {
+
+        console.error(
+            "Erro ao carregar usuário:",
+            error
+        );
+
+        localStorage.removeItem("schoolGameCurrentUser");
+
+    }
+}
+
 /* ==========================================
    TELA INICIAL
 ========================================== */
 
-startButton.addEventListener(
-    "click",
-    () => {
-
-        startScreen.classList.add(
-            "hidden"
-        );
-
-
-        mainScreen.classList.remove(
-            "hidden"
-        );
-
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-
-        });
-
-    }
-);
+if (startButton) {
+    startButton.addEventListener("click", () => {
+        window.location.href = "login.html";
+    });
+}
 
 
 continueButton.addEventListener(
@@ -1396,3 +1414,6 @@ loadSavedTheme();
 updatePlayerUI();
 
 updateConnectionStatus();
+
+checkLoggedUser();
+

@@ -22,7 +22,6 @@
 
     <title>School Game App</title>
 
-
     <!-- ==========================================
          PWA
     =========================================== -->
@@ -32,7 +31,6 @@
         href="manifest.json"
     >
 
-
     <!-- ==========================================
          FAVICON
     =========================================== -->
@@ -41,7 +39,6 @@
         rel="icon"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎒%3C/text%3E%3C/svg%3E"
     >
-
 
     <!-- ==========================================
          GOOGLE FONT - POPPINS
@@ -63,7 +60,6 @@
         rel="stylesheet"
     >
 
-
     <!-- ==========================================
          FONT AWESOME
     =========================================== -->
@@ -72,7 +68,6 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
-
 
     <!-- ==========================================
          CSS
@@ -85,9 +80,7 @@
 
 </head>
 
-
 <body>
-
 
     <!-- ==========================================
          AVISO OFFLINE
@@ -96,6 +89,8 @@
     <div
         id="offlineBanner"
         class="offline-banner"
+        role="status"
+        aria-live="polite"
     >
 
         <i class="fa-solid fa-wifi"></i>
@@ -105,7 +100,6 @@
         </span>
 
     </div>
-
 
 
     <!-- ==========================================
@@ -131,11 +125,9 @@
             📚
         </div>
 
-
         <!-- Conteúdo -->
 
         <div class="start-content">
-
 
             <div class="logo-icon">
 
@@ -143,16 +135,13 @@
 
             </div>
 
-
             <h1>
-                SCHOOL GAME - O JOGO Master 2
+                SCHOOL GAME
             </h1>
-
 
             <div class="start-subtitle">
                 APP
             </div>
-
 
             <p class="start-description">
 
@@ -162,18 +151,19 @@
 
             </p>
 
+            <!-- BOTÃO PARA LOGIN -->
 
             <button
+                type="button"
                 id="startButton"
                 class="primary-button"
             >
 
-                <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-right-to-bracket"></i>
 
-                ENTRAR NO JOGO
+                ENTRAR
 
             </button>
-
 
             <!-- Status da conexão -->
 
@@ -191,12 +181,12 @@
 
             </div>
 
-
         </div>
 
     </section>
 
 
+    
 
     <!-- ==========================================
          TELA PRINCIPAL
@@ -207,13 +197,11 @@
         class="screen main-screen hidden"
     >
 
-
         <!-- ======================================
              TOPBAR
         ======================================= -->
 
         <header class="topbar">
-
 
             <!-- Marca -->
 
@@ -224,7 +212,6 @@
                     <i class="fa-solid fa-graduation-cap"></i>
 
                 </div>
-
 
                 <div>
 
@@ -241,11 +228,9 @@
             </div>
 
 
-
             <!-- Parte direita -->
 
             <div class="topbar-right">
-
 
                 <!-- Conexão -->
 
@@ -264,7 +249,6 @@
                 </div>
 
 
-
                 <!-- XP -->
 
                 <div class="xp-box">
@@ -274,10 +258,13 @@
                     <div>
 
                         <strong>
+
                             <span id="xpValue">
                                 0
                             </span>
+
                             XP
+
                         </strong>
 
                         <small>
@@ -289,7 +276,6 @@
                 </div>
 
 
-
                 <!-- Nível -->
 
                 <div class="level-box">
@@ -298,19 +284,15 @@
                         NÍVEL
                     </span>
 
-                    <strong
-                        id="levelValue"
-                    >
-                        1
+                    <strong id="levelValue">
+                        0
                     </strong>
 
                 </div>
 
-
             </div>
 
         </header>
-
 
 
         <!-- ======================================
@@ -319,21 +301,17 @@
 
         <main class="main-content">
 
-
             <!-- ==================================
                  BOAS-VINDAS
             =================================== -->
 
             <section class="welcome-card">
 
-
                 <div class="welcome-text">
 
-
                     <span class="small-title">
-                        BEM-VINDA AO SCHOOL GAME
+                        BEM-VINDO(A) AO SCHOOL GAME
                     </span>
-
 
                     <h1>
 
@@ -345,7 +323,6 @@
 
                     </h1>
 
-
                     <p>
 
                         Explore as matérias,
@@ -355,8 +332,8 @@
 
                     </p>
 
-
                     <button
+                        type="button"
                         id="continueButton"
                         class="secondary-button"
                     >
@@ -367,15 +344,12 @@
 
                     </button>
 
-
                 </div>
-
 
 
                 <!-- Ilustração -->
 
                 <div class="welcome-illustration">
-
 
                     <div class="illustration-circle">
 
@@ -383,13 +357,11 @@
 
                     </div>
 
-
                     <div class="floating-icon icon-book">
 
                         <i class="fa-solid fa-book"></i>
 
                     </div>
-
 
                     <div class="floating-icon icon-star">
 
@@ -397,19 +369,15 @@
 
                     </div>
 
-
                     <div class="floating-icon icon-trophy">
 
                         <i class="fa-solid fa-trophy"></i>
 
                     </div>
 
-
                 </div>
 
-
             </section>
-
 
 
             <!-- ==================================
@@ -417,7 +385,6 @@
             =================================== -->
 
             <section class="menu-section">
-
 
                 <div class="section-heading">
 
@@ -436,13 +403,12 @@
                 </div>
 
 
-
                 <div class="menu-grid">
-
 
                     <!-- MATÉRIAS -->
 
                     <button
+                        type="button"
                         class="menu-card"
                         data-section="subjects"
                     >
@@ -452,7 +418,6 @@
                             <i class="fa-solid fa-book-open"></i>
 
                         </div>
-
 
                         <div class="menu-card-content">
 
@@ -467,7 +432,6 @@
 
                         </div>
 
-
                         <i
                             class="fa-solid fa-chevron-right arrow"
                         ></i>
@@ -475,10 +439,10 @@
                     </button>
 
 
-
                     <!-- SECRETARIA -->
 
                     <button
+                        type="button"
                         class="menu-card"
                         data-section="secretary"
                     >
@@ -488,7 +452,6 @@
                             <i class="fa-solid fa-school"></i>
 
                         </div>
-
 
                         <div class="menu-card-content">
 
@@ -503,7 +466,6 @@
 
                         </div>
 
-
                         <i
                             class="fa-solid fa-chevron-right arrow"
                         ></i>
@@ -511,10 +473,10 @@
                     </button>
 
 
-
                     <!-- SOBRE -->
 
                     <button
+                        type="button"
                         class="menu-card"
                         data-section="about"
                     >
@@ -524,7 +486,6 @@
                             <i class="fa-solid fa-circle-info"></i>
 
                         </div>
-
 
                         <div class="menu-card-content">
 
@@ -539,7 +500,6 @@
 
                         </div>
 
-
                         <i
                             class="fa-solid fa-chevron-right arrow"
                         ></i>
@@ -547,12 +507,10 @@
                     </button>
 
 
-
-                    <!-- ==================================
-                         CONFIGURAÇÕES
-                    =================================== -->
+                    <!-- CONFIGURAÇÕES -->
 
                     <button
+                        type="button"
                         class="menu-card"
                         data-section="settings"
                     >
@@ -562,7 +520,6 @@
                             <i class="fa-solid fa-gear"></i>
 
                         </div>
-
 
                         <div class="menu-card-content">
 
@@ -577,18 +534,15 @@
 
                         </div>
 
-
                         <i
                             class="fa-solid fa-chevron-right arrow"
                         ></i>
 
                     </button>
 
-
                 </div>
 
             </section>
-
 
 
             <!-- ==================================
@@ -597,13 +551,11 @@
 
             <section class="question-card">
 
-
                 <div class="question-icon">
 
                     <i class="fa-solid fa-robot"></i>
 
                 </div>
-
 
 
                 <div class="question-content">
@@ -613,7 +565,7 @@
                     </span>
 
                     <h2>
-                        Tem alguma dúvida? 
+                        Tem alguma dúvida?
                     </h2>
 
                     <p>
@@ -624,33 +576,30 @@
                 </div>
 
 
-
                 <div class="question-input-area">
-
 
                     <input
                         type="text"
                         id="questionInput"
                         placeholder="Digite sua pergunta..."
                         autocomplete="off"
+                        aria-label="Digite sua pergunta"
                     >
 
-
                     <button
+                        type="button"
                         id="questionButton"
                         title="Enviar pergunta"
+                        aria-label="Enviar pergunta"
                     >
 
                         <i class="fa-solid fa-paper-plane"></i>
 
                     </button>
 
-
                 </div>
 
-
             </section>
-
 
 
             <!-- ==================================
@@ -658,7 +607,6 @@
             =================================== -->
 
             <section class="games-section">
-
 
                 <div class="section-heading">
 
@@ -677,13 +625,12 @@
                 </div>
 
 
-
                 <div class="games-grid">
-
 
                     <!-- QUIZ -->
 
                     <button
+                        type="button"
                         class="game-card"
                         data-game="quiz"
                     >
@@ -705,10 +652,10 @@
                     </button>
 
 
-
                     <!-- MEMÓRIA -->
 
                     <button
+                        type="button"
                         class="game-card"
                         data-game="memory"
                     >
@@ -730,10 +677,10 @@
                     </button>
 
 
-
                     <!-- DESAFIO -->
 
                     <button
+                        type="button"
                         class="game-card"
                         data-game="challenge"
                     >
@@ -754,16 +701,13 @@
 
                     </button>
 
-
                 </div>
 
             </section>
 
-
         </main>
 
     </section>
-
 
 
     <!-- ==========================================
@@ -773,8 +717,9 @@
     <div
         id="modal"
         class="modal hidden"
+        role="dialog"
+        aria-modal="true"
     >
-
 
         <!-- Fundo -->
 
@@ -783,15 +728,14 @@
             id="modalOverlay"
         ></div>
 
-
         <!-- Caixa -->
 
         <div class="modal-box">
 
-
             <!-- Fechar -->
 
             <button
+                type="button"
                 id="closeModal"
                 class="close-modal"
                 aria-label="Fechar"
@@ -801,18 +745,15 @@
 
             </button>
 
-
             <!-- Conteúdo colocado pelo JavaScript -->
 
             <div id="modalContent">
 
             </div>
 
-
         </div>
 
     </div>
-
 
 
     <!-- ==========================================
@@ -822,6 +763,8 @@
     <div
         id="toast"
         class="toast"
+        role="status"
+        aria-live="polite"
     >
 
         <i class="fa-solid fa-circle-check"></i>
@@ -833,13 +776,11 @@
     </div>
 
 
-
     <!-- ==========================================
-         JAVASCRIPT
+         JAVASCRIPT PRINCIPAL
     =========================================== -->
 
     <script src="script.js"></script>
-
 
 
     <!-- ==========================================
@@ -850,40 +791,54 @@
 
         if ("serviceWorker" in navigator) {
 
-            window.addEventListener(
-                "load",
-                () => {
+            window.addEventListener("load", () => {
 
-                    navigator.serviceWorker
-                        .register("service-worker.js")
-                        .then(
-                            registration => {
+                /*
+                 * Service Workers precisam de HTTPS
+                 * ou ambiente local.
+                 */
 
-                                console.log(
-                                    "Service Worker registrado:",
-                                    registration.scope
-                                );
+                const ambienteSeguro =
+                    window.isSecureContext ||
+                    location.hostname === "localhost" ||
+                    location.hostname === "127.0.0.1";
 
-                            }
-                        )
-                        .catch(
-                            error => {
+                if (!ambienteSeguro) {
 
-                                console.error(
-                                    "Erro ao registrar Service Worker:",
-                                    error
-                                );
+                    console.info(
+                        "Service Worker não registrado: o app não está em um ambiente seguro."
+                    );
 
-                            }
-                        );
+                    return;
 
                 }
-            );
+
+                navigator.serviceWorker
+                    .register("./service-worker.js")
+
+                    .then(registration => {
+
+                        console.log(
+                            "Service Worker registrado:",
+                            registration.scope
+                        );
+
+                    })
+
+                    .catch(error => {
+
+                        console.error(
+                            "Erro ao registrar Service Worker:",
+                            error
+                        );
+
+                    });
+
+            });
 
         }
 
     </script>
-
 
 </body>
 

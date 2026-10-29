@@ -404,11 +404,9 @@ authForm.addEventListener(
 
 
                 setTimeout(() => {
-
-                    window.location.href =
-                        "index.html";
-
-                }, 700);
+    sessionStorage.setItem("schoolGameJustLoggedIn", "true");
+    window.location.href = "index.html";
+}, 700);
 
 
                 return;
@@ -466,10 +464,8 @@ authForm.addEventListener(
 
 
             setTimeout(() => {
-
-                window.location.href =
-                    "index.html";
-
+                sessionStorage.setItem("schoolGameJustLoggedIn", "true");
+                window.location.href = "index.html";
             }, 700);
 
 
